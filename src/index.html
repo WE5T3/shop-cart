@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="cart">
+			<div class="cart-title">我的购物车</div>
+			<table class="cart-table" border="" cellspacing="" cellpadding="">
+				<tr>
+					<th><span class="cart-all">全选</span></th>
+					<th>商品</th>
+					<th>单价 </th>
+					<th>数量</th>
+					<th>小计</th>
+					<th>库存</th>
+					<th>操作</th>
+				</tr>
+				<tr class="cart-item">
+					<td><input class="cart-check" type="checkbox" checked /></td>
+					<td><span class="cart-name">Loading...</span></td>
+					<td><span class="cart-price">0</span></td>
+					<td>
+						<span class="cart-reduce">-</span>
+						<span class="cart-num">0</span>
+						<span class="cart-add">+</span>
+					</td>
+					<td><span class="cart-subtotal">0</span></td>
+					<td><span class="cart-inventory">0</span></td>
+					<td><span class="cart-del">删除</span></td>
+				</tr>
+				<tr class="cart-bottom">
+					<td colspan="6">
+						<span class="cart-bottom-span">已选择<span class="cart-total-num">0</span>件商品</span>
+						<span class="cart-bottom-span">总计：<span class="cart-total-price">0</span></span>
+						<span class="cart-bottom-btn">提交订单</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--引入js文件-->
+		<script src="main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//调用ShopCart函数,第一个参数表示HTML中购物车的class前缀,用来针对网页中指定前
+			//缀的class元素进行操作.第二个参数表示页面打开时,自动添加到购物车表格在的商品信息
+			ShopCart('cart',[
+				{name:'Head first HTML&CSS',price:45.8,num: 1,inventory:12},
+				{name:'CSS权威指南',price:45.2,num: 1,inventory:8},
+				{name:'JavaScript高级程序设计',price:45.8,num: 1,inventory:10},
+				{name:'HTTP权威指南',price:49.8,num: 1,inventory:7},
+			]);
+		</script>
+	</body>
+</html>
