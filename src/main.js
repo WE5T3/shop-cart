@@ -1,4 +1,3 @@
-
 //创建ShopCart构造函数
 var ShopCart = function (prefix, defCart) {
     Find.prototype.prefix = prefix
@@ -154,3 +153,9 @@ function Cart(obj) {
         cart.checkAll()
     }
 }
+ShopCart('cart', [
+    { name: 'Head first HTML&CSS', price: 45.8, num: 1, inventory: 12 },
+    { name: 'CSS权威指南', price: 45.2, num: 1, inventory: 8 },
+    { name: 'JavaScript高级程序设计', price: 45.8, num: 1, inventory: 10 },
+    { name: 'HTTP权威指南', price: 49.8, num: 1, inventory: 7 },
+])
