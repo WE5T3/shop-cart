@@ -1,7 +1,4 @@
-/**
- * @param {String} prefix	前缀
- * @param {Array} defCart	初始数据 [{name:'',price:1,num:1}]
- */
+
 //创建ShopCart构造函数
 var ShopCart = function (prefix, defCart) {
     Find.prototype.prefix = prefix
@@ -18,7 +15,6 @@ var ShopCart = function (prefix, defCart) {
 Cart.prototype = {
     /**
      * 向购物车中添加商品
-     * @param {Object} data	商品信息
      */
     add: function (data) {
         var tmp = this.tmp.cloneNode(true) //克隆一个元素节点
@@ -33,8 +29,6 @@ Cart.prototype = {
             //增加商品数量
             item.num.textContent = ++item.data.num
             if (item.data.num <= item.data.inventory) {
-                console.log(item.num.textContent)
-                console.log(item.inventory.textContent)
                 item.updateSubtotal()
                 cart.updateTotal()
             } else {
@@ -160,5 +154,3 @@ function Cart(obj) {
         cart.checkAll()
     }
 }
-
-// window['ShopCart'] = ShopCart;

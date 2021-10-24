@@ -61,6 +61,9 @@
 
 .cart-reduce,
 .cart-add {
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;    
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -132,4 +135,10 @@
 
 .cart-bottom-btn:hover {
     background: #ff6600;
+}
+.rmb{
+    color: red;
+}
+.colwidth{
+    width: 100px;
 }
